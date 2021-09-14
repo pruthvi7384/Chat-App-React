@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Switch } from 'react-router';
+import 'rsuite/dist/styles/rsuite-default.css';
+import PrivateRoute from './components/PrivateRoute';
+import PublicRoute from './components/PublicRoute';
+import { ProfileProvider } from './context/Profile.Context';
+import Home from './pages/Home';
+import Signin from './pages/Signin';
+import './styles/main.scss';
+import './styles/utility.scss';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ProfileProvider>
+      <Switch>
+          <PublicRoute path="/singin">
+              <Signin/>
+          </PublicRoute>
+          <PrivateRoute path="/">
+              <Home/>
+          </PrivateRoute>
+      </Switch>
+    </ProfileProvider>
   );
 }
 
