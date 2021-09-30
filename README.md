@@ -2,12 +2,13 @@
 ## [Demo](https://messenger-app-816c8.web.app/)
 --------
 
-I have created the Facebook messenger clone using React js uses react hooks such as use state, use effect or uses firebase cloud database also hosted using firebase
+I have created chat app using react js and firebase
 
 ## Technology Used
 
 #### 1. `React js`
 #### 2. `Firebase` (https://firebase.google.com/)
+#### 3. `[Rsuit](https://rsuitejs.com/)`
 
 
 Step To Clone Repo
